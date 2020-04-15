@@ -6,6 +6,7 @@ notifications:
  - email: true
 
 before_script:
+ - sudo apt-get install linux-headers-$(uname -r)
  - git clone --branch=exfat-next https://github.com/namjaejeon/exfat_oot
  - export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
  - export PATH=/usr/local/lib:$PATH
